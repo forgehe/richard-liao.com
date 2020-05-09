@@ -7,7 +7,7 @@ export default function Navbar() {
   const [expanded, setExpanded] = useState(false);
   const ref = useRef(null);
   useClickAway(ref, () => {
-    setExpanded(!expanded);
+    setExpanded(false);
   });
   const projectSites = () => {
     return <h2>Portfolios</h2>;
