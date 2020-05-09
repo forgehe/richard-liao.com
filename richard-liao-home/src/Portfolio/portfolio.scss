@@ -1,0 +1,11 @@
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  &:nth-of-type(odd) {
+    background-color: #cee4f5;
+  }
+  &:nth-of-type(even) {
+    background-color: #bbbcf3;
+  }
+}

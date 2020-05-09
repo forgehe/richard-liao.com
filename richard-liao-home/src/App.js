@@ -9,7 +9,9 @@ import projectsList from "./projects/projectsList";
 
 function App() {
   const generateProjects = () => {
-    return projectsList.map((project) => <Portfolio {...project} />);
+    return projectsList.map((project, iterator) => (
+      <Portfolio key={iterator} {...project} />
+    ));
   };
   return (
     <div className="App">

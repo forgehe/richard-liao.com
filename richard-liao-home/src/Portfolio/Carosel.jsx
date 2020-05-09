@@ -18,8 +18,8 @@ export default function Carosel(props) {
   const genCaroselItems = (images) => {
     return images.map((imageURL, index) => {
       return (
-        <Slide index={index}>
-          <Image className="carosel-image" src={imageURL} />
+        <Slide index={index} key={index}>
+          <Image className="carosel__image" src={imageURL} />
         </Slide>
       );
     });
@@ -34,10 +34,10 @@ export default function Carosel(props) {
       isPlaying
       // isIntrinsicHeight
     >
-      <Slider className="carosel-slider">{genCaroselItems(images)}</Slider>
-      <ButtonBack>Back</ButtonBack>
-      <ButtonNext>Next</ButtonNext>
-      <DotGroup dotNumbers />
+      <Slider className="carosel__slider">{genCaroselItems(images)}</Slider>
+      <ButtonBack className="carosel__btn__back">Back</ButtonBack>
+      <ButtonNext className="carosel__btn__next">Next</ButtonNext>
+      <DotGroup className="carosel__btn__dotgroup" dotNumbers />
     </CarouselProvider>
   );
 }
