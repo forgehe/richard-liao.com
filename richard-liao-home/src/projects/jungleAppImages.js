@@ -3,7 +3,7 @@ function importAll(r) {
 }
 
 const jungleAppImages = importAll(
-  require.context("./jungle-app", true, /\.(png|jpe?g|svg)$/)
+  require.context("./jungle-app", true, /\.(png|jpe?g|svg|gif)$/)
 );
 
 export default jungleAppImages;

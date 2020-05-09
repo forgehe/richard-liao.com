@@ -1,13 +1,17 @@
 import React from "react";
 import Carosel from "./Carosel";
-import jungleAppImages from "../images/jungleAppImages";
 import "normalize.css";
 
-export default function Portfolio() {
-  console.log(jungleAppImages);
+export default function Portfolio(props) {
+  const { images, title, description, link } = props;
+  console.log(images);
   return (
     <section>
-      <Carosel images={jungleAppImages} />
+      <a href={link}>
+        <h4>{title}</h4>
+      </a>
+      <p>{description}</p>
+      <Carosel images={images} />
     </section>
   );
 }

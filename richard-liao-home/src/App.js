@@ -5,12 +5,17 @@ import Portfolio from "./Portfolio";
 import Navbar from "./Navbar";
 import Profile from "./Profile";
 
+import projectsList from "./projects/projectsList";
+
 function App() {
+  const generateProjects = () => {
+    return projectsList.map((project) => <Portfolio {...project} />);
+  };
   return (
     <div className="App">
       <Navbar />
       <div className="body">
-        <Portfolio />
+        {generateProjects()}
         <Profile />
       </div>
     </div>
