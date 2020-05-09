@@ -9,6 +9,7 @@ import {
   Image,
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
+import "./carosel.scss";
 
 export default function Carosel(props) {
   const { images } = props;
@@ -18,21 +19,22 @@ export default function Carosel(props) {
     return images.map((imageURL, index) => {
       return (
         <Slide index={index}>
-          <Image src={imageURL} />
+          <Image className="carosel-image" src={imageURL} />
         </Slide>
       );
     });
   };
   return (
     <CarouselProvider
+      className="carosel"
       visibleSlides={1}
       totalSlides={images.length}
       naturalSlideWidth={16}
       naturalSlideHeight={9}
       isPlaying
-      isIntrinsicHeight
+      // isIntrinsicHeight
     >
-      <Slider>{genCaroselItems(images)}</Slider>
+      <Slider className="carosel-slider">{genCaroselItems(images)}</Slider>
       <ButtonBack>Back</ButtonBack>
       <ButtonNext>Next</ButtonNext>
       <DotGroup dotNumbers />

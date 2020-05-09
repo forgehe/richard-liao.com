@@ -7,7 +7,7 @@ export default function Portfolio(props) {
   console.log(images);
   return (
     <section>
-      <a href={link}>
+      <a href={link} target="_blank" rel="noopener noreferrer">
         <h4>{title}</h4>
       </a>
       <p>{description}</p>

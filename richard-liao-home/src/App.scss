@@ -1,14 +1,16 @@
 .App {
-  display: grid;
-  grid-template-areas: "navbar body";
-  grid-template-columns: auto auto;
-  grid-template-rows: 1fr;
-  overflow: hidden;
+  // display: grid;
+  // grid-template-areas: "navbar body";
+  // grid-template-columns: auto auto;
+  // grid-template-rows: 1fr;
+  // overflow: hidden;
+  display: flex;
 }
 
 .body {
-  grid-area: body;
-  width: 100vw;
+  // grid-area: body;
+  // width: 90vw;
+  flex-shrink: 0;
 }
 
 html {
