@@ -1,0 +1,17 @@
+.navbar {
+  grid-area: navbar;
+  width: 30em;
+  max-width: 80vw;
+  border: solid red 1em;
+  background-color: white;
+  transition: 500ms;
+}
+
+.navbar-hidden {
+  width: 0;
+  overflow: hidden;
+}
+
+.navbar-expand-btn {
+  display: block;
+}
