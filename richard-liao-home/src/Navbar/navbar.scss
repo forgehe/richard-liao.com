@@ -1,17 +1,48 @@
+$width-expanded: 30em;
+$width-mini: 5em;
+$max-width: 80vw;
+$transition: 500ms;
+
+.sidebar {
+  transition: $transition;
+  flex-basis: $width-expanded;
+  flex-shrink: 0;
+  background-color: #1a1a1b;
+  color: white;
+  &.sidebar--hidden {
+    flex-basis: $width-mini;
+  }
+}
+
+.sidebar__button {
+  position: fixed;
+  z-index: 100;
+  transition: 200ms;
+  &.sidebar__button--hidden {
+    color: transparent;
+  }
+  &:hover {
+    transform: scale(0.8);
+  }
+  &:active {
+    transform: scale(2) rotateZ(90deg);
+    color: transparent;
+  }
+}
+
 .navbar {
-  // grid-area: navbar;
-  width: 30em;
-  max-width: 80vw;
-  border: solid red 1em;
-  background-color: white;
-  transition: 500ms;
-}
-
-.navbar-hidden {
-  width: 0;
-  overflow: hidden;
-}
-
-.navbar-expand-btn {
-  display: block;
+  position: fixed;
+  width: $width-expanded;
+  max-width: $max-width;
+  border: solid red 1px;
+  transition: $transition;
+  margin-top: 10em;
+  .navbar__expand-btn {
+    display: block;
+    position: fixed;
+  }
+  &.navbar--hidden {
+    width: 0;
+    overflow: hidden;
+  }
 }
