@@ -4,22 +4,26 @@ import "normalize.css";
 import Portfolio from "./Portfolio";
 import Navbar from "./Navbar";
 import Profile from "./Profile";
+import Header from "./Header";
 
 import projectsList from "./projects/projectsList";
 
 function App() {
   const generateProjects = () => {
     return projectsList.map((project, iterator) => (
-      <Portfolio key={iterator} {...project} />
+      <div className="project-spacer">
+        <Portfolio key={iterator} {...project} />
+      </div>
     ));
   };
   return (
     <div className="App">
       <Navbar />
-      <div className="body">
+      <main className="body">
+        <Header />
         {generateProjects()}
         <Profile />
-      </div>
+      </main>
     </div>
   );
 }
