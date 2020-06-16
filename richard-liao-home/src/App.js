@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.scss";
 import "normalize.css";
 import Portfolio from "./Portfolio";
@@ -16,6 +16,9 @@ function App() {
       </div>
     ));
   };
+  useEffect(() => {
+    document.title = "Richard Liao's Portfolio";
+  }, []);
   return (
     <div className="App">
       <Navbar />

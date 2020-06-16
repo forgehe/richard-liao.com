@@ -10,7 +10,7 @@ const projectsList = [
     title: "Meezr",
     description:
       "Made in React, with Rails backend, this was a group project for the finals to create a meal planner website, using data from the spoonacular api.",
-    link: "http://github.com/pratikbassi/meezr",
+    link: "http://meezr.richard-liao.com",
     images: meezrImages,
   },
   {
