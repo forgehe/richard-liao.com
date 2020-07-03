@@ -1,5 +1,5 @@
 import React from "react";
-import Carosel from "./Carosel";
+import Carosel from "../Carosel";
 import "normalize.css";
 import "./portfolio.scss";
 
@@ -12,7 +12,7 @@ export default function Portfolio(props) {
         <h4>{title}</h4>
       </a>
       <p>{description}</p>
-      <Carosel images={images} />
+      <Carosel className="portfolio-carosel" images={images} />
     </section>
   );
 }

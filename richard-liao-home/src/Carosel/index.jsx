@@ -17,6 +17,7 @@ export default function Carosel(props) {
     visibleSlides,
     naturalSlideHeight,
     naturalSlideWidth,
+    className,
   } = props;
   console.log(props);
 
@@ -31,7 +32,7 @@ export default function Carosel(props) {
   };
   return (
     <CarouselProvider
-      className="carosel"
+      className={`${className} carosel`}
       visibleSlides={visibleSlides || 1}
       totalSlides={images.length}
       naturalSlideWidth={naturalSlideWidth || 16}
