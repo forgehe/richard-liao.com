@@ -12,7 +12,12 @@ import "pure-react-carousel/dist/react-carousel.es.css";
 import "./carosel.scss";
 
 export default function Carosel(props) {
-  const { images } = props;
+  const {
+    images,
+    visibleSlides,
+    naturalSlideHeight,
+    naturalSlideWidth,
+  } = props;
   console.log(props);
 
   const genCaroselItems = (images) => {
@@ -27,17 +32,17 @@ export default function Carosel(props) {
   return (
     <CarouselProvider
       className="carosel"
-      visibleSlides={1}
+      visibleSlides={visibleSlides || 1}
       totalSlides={images.length}
-      naturalSlideWidth={16}
-      naturalSlideHeight={9}
+      naturalSlideWidth={naturalSlideWidth || 16}
+      naturalSlideHeight={naturalSlideHeight || 9}
       isPlaying
       // isIntrinsicHeight
     >
       <Slider className="carosel__slider">{genCaroselItems(images)}</Slider>
       <ButtonBack className="carosel__btn__back">Back</ButtonBack>
       <ButtonNext className="carosel__btn__next">Next</ButtonNext>
-      <DotGroup className="carosel__btn__dotgroup" dotNumbers />
+      <DotGroup className="carosel__btn__dotgroup" dotNumbers={false} />
     </CarouselProvider>
   );
 }
