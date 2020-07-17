@@ -5,12 +5,14 @@ $transition: 500ms;
 
 .sidebar {
   transition: $transition;
-  flex-basis: $width-expanded;
-  flex-shrink: 0;
+  // flex-basis: $width-expanded;
+  // flex-shrink: 0;
+  width: $width-expanded;
   background-color: #1a1a1b;
   color: white;
   &.sidebar--hidden {
-    flex-basis: $width-mini;
+    // flex-basis: $width-mini;
+    width: $width-mini;
   }
 }
 
@@ -31,8 +33,8 @@ $transition: 500ms;
 }
 
 .navbar {
-  position: fixed;
-  width: $width-expanded;
+  // width: $width-expanded;
+  width: 100%;
   max-width: $max-width;
   border: solid red 1px;
   transition: $transition;
@@ -43,6 +45,10 @@ $transition: 500ms;
   }
   &.navbar--hidden {
     width: 0;
+    overflow: hidden;
+  }
+  > h2 {
+    white-space: nowrap;
     overflow: hidden;
   }
 }
