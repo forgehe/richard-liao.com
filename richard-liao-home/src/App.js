@@ -24,8 +24,14 @@ function App() {
       <Navbar />
       <main className="body">
         <Header />
-        {generateProjects()}
-        <Profile />
+        <div>
+          <h2 className="bg-title">My Projects</h2>
+          {generateProjects()}
+        </div>
+        <div>
+          <h2 className="bg-title">About Me</h2>
+          <Profile />
+        </div>
       </main>
     </div>
   );
