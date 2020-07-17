@@ -9,29 +9,34 @@ const projectsList = [
   {
     title: "Meezr",
     description:
-      "Made in React, with Rails backend, this was a group project for the finals to create a meal planner website, using data from the spoonacular api.",
-    link: "http://meezr.richard-liao.com",
+      "A group project for our finals to create a meal planner website, pulling data from the spoonacular api. I was mostly in charge of the frontend features in React, while also helping out with getting and transforming the data pulled from the spoonacular API.",
+    stack:
+      "Frontend using React with Material UI, Backend with Ruby on Rails API connected to an ElepantSQL database.",
+    link: "https://meezr.richard-liao.com",
     images: meezrImages,
   },
   {
     title: "Jungle",
     description:
       "Made in Ruby on Rails, this is to learn about implementing new features onto an existing project.",
-    link: "http://github.com/forgehe/jungle-app",
+    stack: "Frontend using ERB, Backend with Ruby on Rails.",
+    link: "https://github.com/forgehe/jungle-app",
     images: jungleAppImages,
   },
   {
     title: "Scheduler",
     description:
       "Made with React, this is a website to schedule meetings created to learn about React and updating state.",
-    link: "http://github.com/forgehe/scheduler",
+    link: "https://github.com/forgehe/scheduler",
     images: schedulerImages,
   },
   {
     title: "kupit",
     description:
       "Made with Express and JQuery, this was a group midterm project to create a online buy/sell marketplace.",
-    link: "http://github.com/pratikbassi/kupit",
+    stack:
+      "Frontend using SASS and JQuery. Backend using ExpressJS and PostgreSQL.",
+    link: "https://github.com/pratikbassi/kupit",
     images: kupitImages,
   },
   {
