@@ -18,27 +18,44 @@ export default function Profile() {
         <p>Lighthouse Labs - April 2020</p>
       </div>
       <div className="profile-skills">
-        <h3 className="profile-title">Skills</h3>
+        <div className="profile-skills-content">
+          <h3>Skills</h3>
+          <ul>
+            <h4>Frontend</h4>
+            <li>HTML5</li>
+            <li>CSS</li>
+            <li>React</li>
+            <li>WordPress</li>
+            <li>EJS Templates</li>
+          </ul>
+          <ul>
+            <h4>Backend</h4>
+            <li>Node.js</li>
+            <li>Ruby on Rails</li>
+            <li>Django</li>
+            <li>Nginx</li>
+          </ul>
+        </div>
         <Carosel
-          className="profile-carosel"
+          className="profile-skills-carosel"
           images={skillsImages}
           visibleSlides="3"
           naturalSlideHeight="1"
           naturalSlideWidth="2"
         />
-        <nav>
-          <h3>Find me elsewhere:</h3>
-          <ul>
-            <li>
-              <a href="https://www.linkedin.com/in/richard-r-liao/">LinkedIn</a>
-            </li>
-            <li>
-              <a href="https://github.com/forgehe">GitHub</a>
-            </li>
-            <li>Fiverr (coming soon)</li>
-          </ul>
-        </nav>
       </div>
+      <nav className="profile-links">
+        <h3>Find me elsewhere:</h3>
+        <ul>
+          <li>
+            <a href="https://www.linkedin.com/in/richard-r-liao/">LinkedIn</a>
+          </li>
+          <li>
+            <a href="https://github.com/forgehe">GitHub</a>
+          </li>
+          <li>Fiverr (coming soon)</li>
+        </ul>
+      </nav>
     </article>
   );
 }

@@ -3,15 +3,21 @@
   margin: 0 auto;
   .profile-skills {
     display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: auto 1fr;
-    grid-template-areas: "title title" "nav carosel";
-    .profile-title {
-      grid-area: title;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "content carosel";
+    .profile-skills-content {
+      grid-area: content;
     }
-    .profile-carosel {
+    .profile-skills-carosel {
       max-height: 10em;
       grid-area: carosel;
     }
+  }
+  .profile-links {
+  }
+  .profile-description {
+  }
+  .profile-education {
   }
 }
