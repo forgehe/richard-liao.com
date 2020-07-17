@@ -1,3 +1,17 @@
-.profile-carosel {
-  max-height: 10em;
+.profile {
+  max-width: 50em;
+  margin: 0 auto;
+  .profile-skills {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "title title" "nav carosel";
+    .profile-title {
+      grid-area: title;
+    }
+    .profile-carosel {
+      max-height: 10em;
+      grid-area: carosel;
+    }
+  }
 }
