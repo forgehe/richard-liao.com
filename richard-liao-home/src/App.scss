@@ -14,15 +14,16 @@ html {
   display: grid;
   grid-template-areas: "navbar body";
   grid-template-columns: auto auto;
-  grid-template-rows: 1fr;
-  overflow: hidden;
+  grid-template-rows: 100vh;
+  overflow-x: hidden;
   // display: flex;
   // justify-content: space-between;
 }
 
 .body {
   grid-area: body;
-  width: 90vw;
+  width: 95vw;
+  overflow-y: scroll;
   // flex-shrink: 0;
   // flex-grow: 1;
 }
