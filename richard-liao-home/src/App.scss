@@ -2,6 +2,7 @@ html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 *,
 *:before,
@@ -30,9 +31,40 @@ html {
 
 .project-spacer {
   &:nth-of-type(odd) {
-    background-color: #cee4f5;
+    background-color: #3f5c724b;
   }
   &:nth-of-type(even) {
-    background-color: #bbbcf3;
+    background-color: #6b6ca750;
   }
+}
+
+.projects {
+}
+
+.about-me {
+  background-color: #33313d23;
+  background-image: url(../src/images/dark-honeycomb.png);
+  padding-bottom: 5em;
+  // z-index: -10;
+}
+
+.bg-title {
+  position: sticky;
+  top: 0;
+  // letter-spacing: 8pt;
+  margin: 0em;
+  margin-bottom: 1em;
+
+  font-size: 72pt;
+  color: #c2c4d1;
+  font-family: "Arial Black", Gadget, sans-serif;
+  text-shadow: 0px 0px 0 rgb(173, 175, 188), -1px 1px 0 rgb(152, 154, 167),
+    -2px 2px 0 rgb(131, 133, 146), -3px 3px 0 rgb(111, 113, 126),
+    -4px 4px 0 rgb(90, 92, 105), -5px 5px 0 rgb(69, 71, 84),
+    -6px 6px 0 rgb(48, 50, 63), -7px 7px 0 rgb(27, 29, 42),
+    -8px 8px 0 rgb(6, 8, 21), -9px 9px 8px rgba(38, 57, 77, 0.83),
+    -9px 9px 1px rgba(38, 57, 77, 0.5), 0px 0px 8px rgba(38, 57, 77, 0.2);
+
+  background-color: red;
+  z-index: 100;
 }

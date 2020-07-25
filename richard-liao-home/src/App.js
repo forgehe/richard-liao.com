@@ -11,7 +11,7 @@ import projectsList from "./projects/projectsList";
 function App() {
   const generateProjects = () => {
     return projectsList.map((project, iterator) => (
-      <div className="project-spacer">
+      <div key={iterator} className="project-spacer">
         <Portfolio key={iterator} {...project} />
       </div>
     ));
@@ -22,15 +22,15 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <main className="body">
+      <main className="body" id="home">
         <Header />
-        <div>
-          <h2 className="bg-title">My Projects</h2>
-          {generateProjects()}
-        </div>
-        <div>
-          <h2 className="bg-title">About Me</h2>
+        <div className="about-me" id="about">
+          <h2 className="bg-title">ABOUT ME</h2>
           <Profile />
+        </div>
+        <div className="projects" id="test1">
+          <h2 className="bg-title">PROJECTS</h2>
+          {generateProjects()}
         </div>
       </main>
     </div>

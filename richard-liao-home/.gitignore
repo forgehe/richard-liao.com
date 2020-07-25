@@ -11,6 +11,7 @@
 # production
 /build
 /resources
+/tmp
 
 # misc
 .DS_Store
