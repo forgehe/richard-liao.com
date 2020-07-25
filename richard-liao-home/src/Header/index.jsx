@@ -11,7 +11,7 @@ export default function Template() {
           links to past projects.
         </h1>
         <h1>Richard Liao</h1>
-        <h5>Fullstack Web Developer</h5>
+        <h2>Fullstack Web Developer</h2>
       </hgroup>
     </header>
   );
