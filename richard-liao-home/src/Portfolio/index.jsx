@@ -7,7 +7,7 @@ export default function Portfolio(props) {
   const { images, title, description, link, github } = props;
   console.log(images);
   return (
-    <section className="project">
+    <section className="project" id={`project-` + title}>
       <div className="project-header">
         <h4 className="project-header-title">{title}</h4>
       </div>
