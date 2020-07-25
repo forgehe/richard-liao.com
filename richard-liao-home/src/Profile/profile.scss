@@ -1,6 +1,9 @@
 .profile {
   max-width: 50em;
   margin: 0 auto;
+  background-color: whitesmoke;
+  padding: 3rem;
+  border-radius: 3rem;
   .profile-skills {
     display: grid;
     grid-template-columns: auto 1fr;
