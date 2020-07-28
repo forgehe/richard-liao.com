@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "normalize.css";
 import "./navbar.scss";
 import { useClickAway } from "react-use";
@@ -20,11 +20,23 @@ export default function Navbar() {
   useClickAway(ref, () => {
     setExpanded(false);
   });
-  const delayedClose = (delay) => {
-    return setTimeout(() => {
+
+  const [buttonClicked, setButtonClicked] = useState(false);
+
+  useEffect(() => {
+    // console.log(`buttonClicked = ${buttonClicked}`);
+    let delayNavClose = setTimeout(() => {
       setExpanded(false);
-    }, delay);
-  };
+    }, 600);
+
+    return () => {
+      // console.log(`1 delayNavClose = ${delayNavClose}`);
+      clearTimeout(delayNavClose);
+      // console.log(`2 delayNavClose = ${delayNavClose}`);
+      setButtonClicked(false);
+    };
+  }, [buttonClicked]);
+
   const projectSites = () => {
     return (
       <>
@@ -35,7 +47,7 @@ export default function Navbar() {
           to="projects"
           duration={500}
           offset={-100}
-          onClick={() => delayedClose(600)}
+          onClick={() => setButtonClicked(true)}
         >
           <h2>Projects</h2>
         </Link>
@@ -49,7 +61,7 @@ export default function Navbar() {
               to={`project-` + project.title}
               duration={500}
               offset={-100}
-              onClick={() => delayedClose(600)}
+              onClick={() => setButtonClicked(true)}
             >
               <h3>{project.title}</h3>
             </Link>
@@ -80,7 +92,7 @@ export default function Navbar() {
             activeClass="active"
             to="home"
             duration={500}
-            onClick={() => delayedClose(600)}
+            onClick={() => setButtonClicked(true)}
           >
             <h2>Richard Liao</h2>
           </Link>
@@ -90,7 +102,7 @@ export default function Navbar() {
             activeClass="active"
             to="about"
             duration={500}
-            onClick={() => delayedClose(600)}
+            onClick={() => setButtonClicked(true)}
           >
             <h2>About</h2>
           </Link>
@@ -100,7 +112,7 @@ export default function Navbar() {
             activeClass="active"
             to="contact"
             duration={500}
-            onClick={() => delayedClose(600)}
+            onClick={() => setButtonClicked(true)}
           >
             <h2>Contact</h2>
           </Link>

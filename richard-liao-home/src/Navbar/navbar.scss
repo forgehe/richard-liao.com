@@ -23,6 +23,7 @@ $transition: 500ms;
   transition: $transition;
   margin-top: 8rem;
   white-space: nowrap;
+  overflow: hidden;
   .navbar__expand-btn {
     display: block;
     position: fixed;
@@ -42,7 +43,7 @@ $transition: 500ms;
   z-index: 100;
   // transition: 250ms;
   &.sidebar__button--hidden {
-    display: none;
+    visibility: hidden;
   }
   &:hover {
     transform: scale(0.8);
