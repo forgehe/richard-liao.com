@@ -9,36 +9,55 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto 1fr;
   grid-template-areas: "title title" "description carosel";
+  gap: 2em;
   .project-header {
     grid-area: title;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+
     .project-header-title {
-      font-size: larger;
+      font-size: 24pt;
+      margin: 0;
+    }
+    .project-header-stack {
+      font-size: medium;
+      font-weight: lighter;
+      font-style: italic;
+      margin: 0;
     }
   }
   .project-carosel {
     grid-area: carosel;
-    .project-carosel-links {
-      display: flex;
-      justify-content: space-evenly;
-      a {
-        height: 3em;
-        width: 50%;
-        text-align: center;
-        box-shadow: inset 0px 1px 3px 0px #91b8b3;
-        background: linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
-        background-color: #768d87;
-        border-radius: 5px;
-        border: 1px solid #566963;
-        color: #ffffff;
-        font-weight: bold;
-        text-decoration: none;
-        text-shadow: 0px -1px 0px #2b665e;
+  }
+  .project-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: "description description" "link github";
+    gap: 2em;
+    .project-description {
+      grid-area: description;
+    }
+
+    .project-content-buttons {
+      padding: 0.7em;
+      text-align: center;
+      box-shadow: inset 0px 1px 3px 0px #91b8b3;
+      background: linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+      background-color: #768d87;
+      border-radius: 5px;
+      border: 1px solid #566963;
+      color: #ffffff;
+      font-weight: bold;
+      text-decoration: none;
+      text-shadow: 0px -1px 0px #2b665e;
+      .project-link {
+        grid-area: link;
+      }
+      .project-github {
+        grid-area: github;
       }
     }
-  }
-  .project-description {
-    grid-area: description;
   }
 }
