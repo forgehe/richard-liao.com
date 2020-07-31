@@ -6,10 +6,12 @@ import {
   ButtonBack,
   ButtonNext,
   DotGroup,
+  Dot,
   Image,
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import "./carosel.scss";
+import "./css/fontello.css";
 
 export default function Carosel(props) {
   const {
@@ -30,6 +32,18 @@ export default function Carosel(props) {
       );
     });
   };
+  const genCaroselDots = (images) => {
+    return images.map((imageURL, index) => {
+      return (
+        <Dot
+          slide={index}
+          key={index}
+          children={<i className="icon-circle-empty"></i>}
+        />
+      );
+    });
+  };
+
   return (
     <CarouselProvider
       className={`${className} carosel`}
@@ -38,12 +52,17 @@ export default function Carosel(props) {
       naturalSlideWidth={naturalSlideWidth || 16}
       naturalSlideHeight={naturalSlideHeight || 9}
       isPlaying
+      infinite
       // isIntrinsicHeight
     >
+      <ButtonBack className="carosel__btn carosel__btn__back">
+        <i class="icon-left-open"></i>
+      </ButtonBack>
+      <ButtonNext className="carosel__btn carosel__btn__next">
+        <i class="icon-right-open"></i>
+      </ButtonNext>
       <Slider className="carosel__slider">{genCaroselItems(images)}</Slider>
-      <ButtonBack className="carosel__btn__back">Back</ButtonBack>
-      <ButtonNext className="carosel__btn__next">Next</ButtonNext>
-      <DotGroup className="carosel__btn__dotgroup" dotNumbers={false} />
+      <div className="carosel__btn__dotgroup">{genCaroselDots(images)}</div>
     </CarouselProvider>
   );
 }

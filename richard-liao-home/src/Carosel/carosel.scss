@@ -3,10 +3,27 @@
   display: grid;
   overflow: hidden;
   grid-template-columns: auto 1fr auto;
+  grid-template-areas: "image image image";
   align-items: center;
   background-color: white;
+  .carosel__btn {
+    border-radius: 50%;
+    font-size: 20pt;
+    border: none;
+    padding: 1rem;
+    opacity: 50%;
+    transition-duration: 100ms;
+    &:hover {
+      opacity: 80%;
+    }
+    &:active {
+      filter: invert(1);
+      transition-duration: 0ms;
+    }
+  }
   .carosel__slider {
-    grid-area: 1/1/1/3;
+    // grid-area: 1/1/1/3;
+    grid-area: image;
   }
   .carosel__image {
     object-fit: contain;
@@ -24,5 +41,20 @@
     z-index: 10;
     align-self: end;
     justify-self: center;
+    opacity: 60%;
+    transition: 100ms;
+    &:hover {
+      opacity: 80%;
+    }
+    .carousel__dot {
+      font-size: 10pt;
+      padding: 0;
+      background: none;
+      border: none;
+      text-shadow: none;
+      &:disabled {
+        color: black;
+      }
+    }
   }
 }
