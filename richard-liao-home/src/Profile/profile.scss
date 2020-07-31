@@ -2,10 +2,11 @@
 
 .profile {
   max-width: 50em;
-  margin: 0 auto;
+  margin: 3rem auto;
   background-color: whitesmoke;
   padding: 3rem;
   border-radius: 3rem;
+  color: $prussian-blue;
   .profile-skills {
     display: grid;
     grid-template-columns: auto 1fr;

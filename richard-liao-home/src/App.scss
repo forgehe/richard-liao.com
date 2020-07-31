@@ -13,31 +13,37 @@ html {
   -moz-box-sizing: inherit;
   box-sizing: inherit;
 }
+body {
+  color: $text-white;
+}
 .App {
   display: grid;
   grid-template-areas: "navbar body";
   grid-template-columns: auto auto;
   grid-template-rows: 100vh;
   overflow-x: hidden;
-  // display: flex;
-  // justify-content: space-between;
 }
 
 .body {
   grid-area: body;
   width: 95vw;
   overflow-y: scroll;
-  background-color: $sapphire-blue;
-  // flex-shrink: 0;
-  // flex-grow: 1;
+  background-color: $lapis-lazuli;
 }
 
 .project-spacer {
-  &:nth-of-type(odd) {
-    background-color: #3f5c724b;
+  padding: 2rem 0;
+  &.project-even {
+    background-color: $celadon-blue;
+    .carosel {
+      background-color: $blue-ncs;
+    }
   }
-  &:nth-of-type(even) {
-    background-color: #6b6ca750;
+  &.project-odd {
+    background-color: $blue-ncs;
+    .carosel {
+      background-color: $celadon-blue;
+    }
   }
 }
 
@@ -45,8 +51,8 @@ html {
 }
 
 .about-me {
-  background-color: #33313d23;
-  background-image: url(../src/images/dark-honeycomb.png);
+  background-color: $prussian-blue;
+  // background-image: url(../src/images/dark-honeycomb.png);
   padding-bottom: 5em;
   // z-index: -10;
 }
@@ -56,18 +62,13 @@ html {
   top: 0;
   // letter-spacing: 8pt;
   margin: 0em;
-  margin-bottom: 1em;
-
-  font-size: 72pt;
-  color: #c2c4d1;
-  font-family: "Arial Black", Gadget, sans-serif;
-  text-shadow: 0px 0px 0 rgb(173, 175, 188), -1px 1px 0 rgb(152, 154, 167),
-    -2px 2px 0 rgb(131, 133, 146), -3px 3px 0 rgb(111, 113, 126),
-    -4px 4px 0 rgb(90, 92, 105), -5px 5px 0 rgb(69, 71, 84),
-    -6px 6px 0 rgb(48, 50, 63), -7px 7px 0 rgb(27, 29, 42),
-    -8px 8px 0 rgb(6, 8, 21), -9px 9px 8px rgba(38, 57, 77, 0.83),
-    -9px 9px 1px rgba(38, 57, 77, 0.5), 0px 0px 8px rgba(38, 57, 77, 0.2);
-
+  // margin-bottom: 1em;
+  padding-top: 1rem;
+  font-size: 3rem;
+  text-shadow: -1px 1px 0 rgb(128, 128, 128), -2px 2px 1px rgba(0, 0, 0, 1);
+  -webkit-text-shadow: -1px 1px 0 rgb(128, 128, 128),
+    -2px 2px 1px rgba(0, 0, 0, 1);
+  -moz-text-shadow: -1px 1px 0 rgb(128, 128, 128), -2px 2px 1px rgba(0, 0, 0, 1);
   background-color: $lapis-lazuli;
   z-index: 100;
 }

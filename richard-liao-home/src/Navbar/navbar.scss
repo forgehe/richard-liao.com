@@ -11,7 +11,6 @@ $transition: 500ms;
   // flex-shrink: 0;
   width: $width-expanded;
   background-color: #1a1a1b;
-  color: white;
   &.sidebar--hidden {
     // flex-basis: $width-mini;
     width: $width-mini;

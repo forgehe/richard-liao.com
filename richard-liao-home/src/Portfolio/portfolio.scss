@@ -1,9 +1,6 @@
 @import "../colors.scss";
 
 .project {
-  // display: flex;
-  // flex-direction: column;
-  // align-items: flex-start;
   padding: 1em;
   max-width: 80vw;
   margin: 0 auto;
@@ -12,6 +9,7 @@
   grid-template-rows: auto 1fr;
   grid-template-areas: "title title" "description carosel";
   gap: 2em;
+
   .project-header {
     grid-area: title;
     display: flex;
@@ -45,15 +43,21 @@
     .project-content-buttons {
       padding: 0.7em;
       text-align: center;
-      box-shadow: inset 0px 1px 3px 0px #91b8b3;
-      background: linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
-      background-color: #768d87;
-      border-radius: 5px;
-      border: 1px solid #566963;
-      color: #ffffff;
+      border-radius: 0.7em;
+      border: 1px solid $prussian-blue;
       font-weight: bold;
       text-decoration: none;
-      text-shadow: 0px -1px 0px #2b665e;
+      &:visited {
+        color: $text-white;
+      }
+      &:hover {
+        background-color: $lapis-lazuli;
+        text-shadow: 0px -1px 0px #2b665e;
+      }
+      &:active {
+        text-shadow: none;
+        filter: invert(1);
+      }
       &.project-link {
         grid-area: link;
       }

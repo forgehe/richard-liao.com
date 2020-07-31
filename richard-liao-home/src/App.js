@@ -11,7 +11,12 @@ import projectsList from "./projects/projectsList";
 function App() {
   const generateProjects = () => {
     return projectsList.map((project, iterator) => (
-      <div key={iterator} className="project-spacer">
+      <div
+        key={iterator}
+        className={`project-spacer + ${
+          iterator % 2 === 0 ? "project-even" : "project-odd"
+        }`}
+      >
         <Portfolio key={iterator} {...project} />
       </div>
     ));
