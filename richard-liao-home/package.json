@@ -12,9 +12,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-icons": "^3.10.0",
-    "react-responsive-carousel": "^3.2.5",
-    "react-scripts": "3.4.1",
-    "react-scroll": "^1.8.0"
+    "react-scripts": "3.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -38,6 +36,9 @@
     ]
   },
   "devDependencies": {
+    "react-responsive-carousel": "^3.2.5",
+    "react-tsparticles": "^1.17.5",
+    "react-scroll": "^1.8.0",
     "react-use": "^14.3.0"
   }
 }
