@@ -25,9 +25,10 @@ body {
   }
 }
 .App {
+  overflow-x: hidden;
   display: grid;
   @include tablet-landscape {
-    overflow-x: hidden;
+    overflow-y: hidden;
     grid-template-areas: "navbar body";
     grid-template-columns: auto 1fr;
     grid-template-rows: 100vh;
@@ -47,6 +48,9 @@ body {
   background-color: $lapis-lazuli;
   @include phone {
     width: 100%;
+  }
+  @include tablet-landscape {
+    width: calc(100vw - 5rem);
   }
 }
 
