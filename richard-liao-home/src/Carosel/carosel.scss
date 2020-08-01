@@ -11,11 +11,15 @@
   border-radius: 0.5rem;
   .carosel__btn {
     border-radius: 50%;
-    font-size: 1.7rem;
     border: none;
     padding: 1rem;
     opacity: 50%;
     transition-duration: 100ms;
+    font-size: 1rem;
+
+    @include tablet-landscape {
+      font-size: 1.7rem;
+    }
     &:hover {
       opacity: 80%;
     }
