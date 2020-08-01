@@ -20,6 +20,8 @@ export default function Carosel(props) {
     naturalSlideHeight,
     naturalSlideWidth,
     className,
+    dragStep,
+    step,
   } = props;
   console.log(props);
 
@@ -51,6 +53,8 @@ export default function Carosel(props) {
       totalSlides={images.length}
       naturalSlideWidth={naturalSlideWidth || 16}
       naturalSlideHeight={naturalSlideHeight || 9}
+      dragStep={dragStep || 1}
+      step={step || 1}
       isPlaying
       infinite
       // isIntrinsicHeight
