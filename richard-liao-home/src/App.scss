@@ -77,10 +77,13 @@ body {
   position: sticky;
   top: 0;
   // letter-spacing: 8pt;
-  margin: 0em;
+  margin: 0;
   // margin-bottom: 1em;
   padding-top: 1rem;
-  font-size: 3rem;
+  font-size: 2rem;
+  @include tablet-landscape {
+    font-size: 3rem;
+  }
   text-shadow: -1px 1px 0 rgb(128, 128, 128), -2px 2px 1px rgba(0, 0, 0, 1);
   -webkit-text-shadow: -1px 1px 0 rgb(128, 128, 128),
     -2px 2px 1px rgba(0, 0, 0, 1);

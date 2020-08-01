@@ -2,7 +2,7 @@
 @import "../breakpoints.scss";
 
 .profile {
-  max-width: 50em;
+  max-width: 50rem;
   margin: 3rem auto;
   background-color: whitesmoke;
   padding: 3rem;
@@ -17,7 +17,7 @@
       grid-area: content;
     }
     .profile-skills-carosel {
-      max-height: 10em;
+      max-height: 10rem;
       grid-area: carosel;
     }
   }

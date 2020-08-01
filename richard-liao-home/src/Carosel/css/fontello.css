@@ -29,8 +29,8 @@
 
   display: inline-block;
   text-decoration: inherit;
-  width: 1em;
-  /* margin-right: .2em; */
+  width: 1rem;
+  /* margin-right: .2rem; */
   text-align: center;
   /* opacity: .8; */
 
@@ -39,11 +39,11 @@
   text-transform: none;
 
   /* fix buttons height, for twitter bootstrap */
-  line-height: 1em;
+  line-height: 1rem;
 
   /* Animation center compensation - margins should be symmetric */
   /* remove if not needed */
-  /* margin-left: .2em; */
+  /* margin-left: .2rem; */
 
   /* you can be more comfortable with increased icons size */
   /* font-size: 120%; */
