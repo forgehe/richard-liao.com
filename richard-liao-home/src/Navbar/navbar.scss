@@ -1,36 +1,55 @@
 @import "../colors.scss";
+@import "../breakpoints.scss";
 
-$width-expanded: 30em;
-$width-mini: 5vw;
+$expanded: 30em;
+$mini-size: 5rem;
 $max-width: 80vw;
+$max-height: 80vh;
 $transition: 500ms;
 
 .sidebar {
-  transition: $transition;
-  // flex-basis: $width-expanded;
-  // flex-shrink: 0;
-  width: $width-expanded;
-  background-color: #1a1a1b;
   &.sidebar--hidden {
-    // flex-basis: $width-mini;
-    width: $width-mini;
+    width: 100%;
+    height: 5rem;
+    @include tablet-landscape {
+      width: $mini-size;
+      height: 100%;
+    }
   }
+  width: 100%;
+  max-height: $max-height;
+
+  height: $expanded;
+  @include tablet-landscape {
+    width: $expanded;
+    max-width: $max-width;
+    height: 100%;
+    max-height: 100vh;
+  }
+  transition: $transition;
+  background-color: #1a1a1b;
 }
 
 .navbar {
-  // width: $width-expanded;
   width: 100%;
-  max-width: $max-width;
+  height: 100%;
   transition: $transition;
-  margin-top: 8rem;
-  white-space: nowrap;
-  overflow: hidden;
-  .navbar__expand-btn {
-    display: block;
-    position: fixed;
+  @include tablet-landscape {
+    margin-top: 10vh;
   }
+  white-space: nowrap;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  // .navbar__expand-btn {
+  //   display: block;
+  //   position: fixed;
+  // }
   &.navbar--hidden {
-    width: 0;
+    height: 0;
+    @include tablet-landscape {
+      width: 0;
+      height: 100%;
+    }
     overflow: hidden;
   }
   > h2 {
@@ -42,6 +61,10 @@ $transition: 500ms;
 .sidebar__button {
   position: fixed;
   z-index: 100;
+  right: 0;
+  @include tablet-landscape {
+    left: 0;
+  }
   // transition: 250ms;
   &.sidebar__button--hidden {
     visibility: hidden;

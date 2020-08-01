@@ -83,7 +83,7 @@ export default function Navbar() {
               : "sidebar__button sidebar__button--hidden"
           }
           onClick={() => setExpanded(!expanded)}
-          size="5em"
+          size="5rem"
         />
         <div className={expanded ? "navbar" : "navbar navbar--hidden"}>
           <Link

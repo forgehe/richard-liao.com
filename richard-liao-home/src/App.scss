@@ -1,4 +1,5 @@
 @import "./colors.scss";
+@import "./breakpoints.scss";
 
 html {
   -webkit-box-sizing: border-box;
@@ -15,20 +16,38 @@ html {
 }
 body {
   color: $text-white;
+  font-size: 14px;
+  @include tablet-portrait {
+    font-size: 15px;
+  }
+  @include tablet-landscape {
+    font-size: 16px;
+  }
 }
 .App {
   display: grid;
-  grid-template-areas: "navbar body";
-  grid-template-columns: auto auto;
-  grid-template-rows: 100vh;
-  overflow-x: hidden;
+  @include tablet-landscape {
+    overflow-x: hidden;
+    grid-template-areas: "navbar body";
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 100vh;
+  }
+  grid-template-columns: auto;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "navbar" "body";
+  height: 100vh;
+  // @include tablet-portrait {
+  // }
 }
 
 .body {
   grid-area: body;
-  width: 95vw;
+  // width: 95vw;
   overflow-y: scroll;
   background-color: $lapis-lazuli;
+  @include phone {
+    width: 100%;
+  }
 }
 
 .project-spacer {
@@ -47,13 +66,10 @@ body {
   }
 }
 
-.projects {
-}
-
 .about-me {
   background-color: $prussian-blue;
   // background-image: url(../src/images/dark-honeycomb.png);
-  padding-bottom: 5em;
+  padding-bottom: 5rem;
   // z-index: -10;
 }
 
