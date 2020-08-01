@@ -39,9 +39,11 @@ export default function Profile() {
         <Carosel
           className="profile-skills-carosel"
           images={skillsImages}
-          visibleSlides="3"
+          visibleSlides="2"
           naturalSlideHeight="1"
           naturalSlideWidth="2"
+          step="2"
+          dragStep="2"
         />
       </div>
       <nav className="profile-links">

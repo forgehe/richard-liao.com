@@ -70,6 +70,8 @@ body {
   background-color: $prussian-blue;
   // background-image: url(../src/images/dark-honeycomb.png);
   padding-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
   // z-index: -10;
 }
 
