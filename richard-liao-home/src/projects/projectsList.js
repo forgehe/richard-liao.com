@@ -35,7 +35,7 @@ const projectsList = [
   {
     title: "kupit",
     description:
-      "This was a group midterm project to create an online buy/sell marketplace. Main contributions was to the inital html scaffolding, and ",
+      "This was a group midterm project to create an online buy/sell marketplace. Main contributions was to the inital html scaffolding, SCSS, and AJAX calls to ExpressJS. Was also involved in writing helper functions for Express to communicate with PostgreSQL",
     stack:
       "Frontend using Bootstrap, SASS and JQuery. Backend with ExpressJS and PostgreSQL.",
     github: "https://github.com/pratikbassi/kupit",
@@ -44,7 +44,7 @@ const projectsList = [
   {
     title: "Tweeter",
     description:
-      "A simple twitter clone to learn about AJAX calls and CSS styling.",
+      "A simple twitter clone to learn about AJAX calls and CSS styling. An exercise in sending AJAX calls and rendering the data on the page.",
     stack: "Frontend using JQuery and SCSS. Backend with ExpressJS.",
     github: "https://github.com/forgehe/tweeter",
     images: tweeterImages,
@@ -52,7 +52,7 @@ const projectsList = [
   {
     title: "Tinyapp",
     description:
-      "A website to shorten URLs, created to learn about Express and EJS files. ",
+      "A website to shorten URLs, created to learn about Express and EJS files.",
     stack: "Frontend using JavaScript and HTML. Backend with ExpressJS.",
     github: "https://github.com/forgehe/tinyapp",
     images: tinyappImages,
